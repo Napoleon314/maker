@@ -451,4 +451,4 @@ def build_project_by_name(name):
 	bi = build_info(cfg.compiler, cfg.archs, cfg.cfg)
 	print("Building %s..." % (name))
 	for info in bi.compilers:
-		build_project(name, "build", bi, info, info.is_windows)
+		build_project(name, build_cfg.build_path, bi, info, info.is_windows)
