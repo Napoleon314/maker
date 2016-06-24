@@ -1,4 +1,5 @@
 import os, sys, multiprocessing, subprocess
+import build_cfg
 
 class cfg_from_argv:
 	def __init__(self, argv, base = 0):
