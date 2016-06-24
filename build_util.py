@@ -1,11 +1,4 @@
 import os, sys, multiprocessing, subprocess
-try:
-	import build_cfg
-except:
-	print("Generating build_cfg.py ...")
-	import shutil
-	shutil.copyfile("build_cfg_default.py", "build_cfg.py")
-	import build_cfg
 
 class cfg_from_argv:
 	def __init__(self, argv, base = 0):
