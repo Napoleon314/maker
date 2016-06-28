@@ -1,0 +1,11 @@
+ADD_DEFINITIONS(-DUNICODE -D_UNICODE)
+
+IF(MSVC)
+	IF(MSVC_VERSION GREATER 1800)		
+		SET(CMAKE_CXX_FLAGS "/DWIN32 /D_WINDOWS /W3 /WX /GR- /EHsc")
+	ELSE()
+		MESSAGE(FATAL_ERROR "The minimum visual studio version is vc140.")
+	ENDIF()
+ELSE()
+	SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Werror -fno-rtti -std=c++14")
+ENDIF()
