@@ -9,7 +9,7 @@ MACRO(SUBDIRLIST result curdir)
   SET(${result} ${dirlist})
 ENDMACRO()
 
-MACRO(SEARCH_LIB_FILES result root_name list)
+MACRO(SEARCH_FILES result root_name list)
 	UNSET(${result})
 	UNSET(_GF)
 	FOREACH(_P ${${list}})
@@ -32,9 +32,4 @@ MACRO(SEARCH_LIB_FILES result root_name list)
 		ENDFOREACH()
 		SOURCE_GROUP(${root_name}\\${_G} FILES ${_GF})
 	ENDFOREACH()
-
-	
-
-	#MESSAGE(STATUS ${${result}})
-
 ENDMACRO()
