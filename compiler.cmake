@@ -230,3 +230,9 @@ IF(BUILD_PLATFORM_LINUX)
 ENDIF()
 
 SET(BUILD_OUTPUT_SUFFIX _${BUILD_COMPILER_NAME}${BUILD_COMPILER_VERSION})
+
+if (MSVC)
+    enable_language(CXX ASM_MASM)
+else()
+    enable_language(CXX ASM)
+endif()
